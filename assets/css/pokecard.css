@@ -206,7 +206,7 @@
 }
 
 .like-icon {
-    content: url("/assets/images/like-none.png");
+    content: url("assets/images/like-none.png");
     height: fit-content;
     width: 30px;
     filter: invert(1);
@@ -214,13 +214,13 @@
 }
 
 .like-icon:hover {
-    content: url("/assets/images/like-full.png");
+    content: url("assets/images/like-full.png");
     filter: none;
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .liked {
-    content: url("/assets/images/like-full.png");
+    content: url("assets/images/like-full.png");
     filter: none;
     transform: scale(1);
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
