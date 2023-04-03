@@ -63,6 +63,7 @@
     flex: 1 1 auto;
     background-color: #ffffff;
     border-radius: 1.5rem;
+    height: 340px;
 }
 
 .tabs input[type="radio"] {
@@ -206,7 +207,7 @@
 }
 
 .like-icon {
-    content: url("assets/images/like-none.png");
+    content: url("../images/like-none.png");
     height: fit-content;
     width: 30px;
     filter: invert(1);
@@ -214,13 +215,13 @@
 }
 
 .like-icon:hover {
-    content: url("assets/images/like-full.png");
+    content: url("../images/like-full.png");
     filter: none;
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .liked {
-    content: url("assets/images/like-full.png");
+    content: url("../images/like-full.png");
     filter: none;
     transform: scale(1);
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -282,6 +283,7 @@
 .card-content {
     padding: 0rem 1rem 0rem 1rem;
     overflow: auto;
+    margin-bottom: 1.5rem;
 }
 
 .card-content table {
@@ -296,7 +298,7 @@
 }
 
 .card-content table tr {
-    display: block;
+    display: grid;
     float: left;
     font-size: .625rem;
     text-align: left;
@@ -324,4 +326,87 @@
 .content-header {
     display: block;
     margin: 1rem 0rem 1rem;
+}
+
+.status-percent {
+    background-color: #8884849f;
+    height: 3px;
+    width: 160px;
+    position: absolute;
+    transform: translateX(-25px) translateY(-1px);
+    border-radius: 1rem;
+}
+
+.status-percent-value {
+    background-color: green;
+    width: 50%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.good {
+    background-color: green;
+}
+
+.bad {
+    background-color: red;
+}
+
+.moves-table {
+    display: flex;
+    flex-direction: column;
+    font-size: .625rem;
+    height: 100%;
+    overflow: visible;
+}
+
+.moves-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: .25rem;
+    margin-bottom: .5rem;
+}
+
+.card-content::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 1rem;
+}
+
+.card-content::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 1rem;
+}
+
+.op-5 {
+    opacity: .5;
+}
+
+.moves-row span {
+    margin-left: 2rem;
+}
+
+.evo-chain {
+    display: flex;
+    justify-content: center;
+}
+
+.evo-chain img {
+    height: 15px;
+    margin: .5rem;
+}
+
+.chain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.25rem 0.5rem 0.25rem 0.5rem;
+}
+
+.chain .chain-name {
+    text-transform: capitalize;
+    padding: 0.5rem;
+}
+
+.chain .chain-trigger {
+    font-size: .625rem;
 }

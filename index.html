@@ -101,17 +101,121 @@
                         </tr>
                     </table>
                 </section>
-                <section class="base-content">Aqui ficarâo os status básicos</section>
-                <section class="evo-content">Aqui ficarâo as evoluções</section>
-                <section class="moves-content">Aqui ficarâo os ataques</section>
+                <section class="base-content">
+                    <table>
+                        <tr>
+                            <th id="status-hp">Hp</th>
+                            <th id="status-atk">Attack</th>
+                            <th id="status-def">Defense</th>
+                            <th id="status-sp-atk">Sp. Atk</th>
+                            <th id="status-sp-def">Sp. Def</th>
+                            <th id="status-spd">Speed</th>
+                            <th id="status-tot">Total</th>
+                        </tr>
+                        <tr>
+                            <td id="status-hp-value">45</td>
+                            <td id="status-atk-value">49</td>
+                            <td id="status-def-value">49</td>
+                            <td id="status-sp-atk-value">65</td>
+                            <td id="status-sp-def-value">65</td>
+                            <td id="status-spd-value">45</td>
+                            <td id="status-tot-value">318</td>
+                        </tr>
+                        <tr>
+                            <td id="status-hp-bar">
+                                <div class="status-percent">
+                                    <div class="status-percent-value bad" id="status-hp-value-bar" style="width: 45%"></div>
+                                </div>
+                            </td>
+                            <td id="status-atk-bar">
+                                <div class="status-percent">
+                                    <div class="status-percent-value bad" id="status-atk-value-bar" style="width: 49%"></div>
+                                </div>
+                            </td>
+                            <td id="status-def-bar">
+                                <div class="status-percent">
+                                    <div class="status-percent-value bad" id="status-def-value-bar" style="width: 49%"></div>
+                                </div>
+                            </td>
+                            <td id="status-sp-atk-bar">
+                                <div class="status-percent">
+                                    <div class="status-percent-value good" id="status-sp-atk-value-bar" style="width: 65%"></div>
+                                </div>
+                            </td>
+                            <td id="status-sp-def-bar">
+                                <div class="status-percent">
+                                    <div class="status-percent-value good" id="status-sp-def-value-bar" style="width: 65%"></div>
+                                </div>
+                            </td>
+                            <td id="status-spd-bar">
+                                <div class="status-percent">
+                                    <div class="status-percent-value bad" id="status-spd-value-bar" style="width: 45%"></div>
+                                </div>
+                            </td>
+                            <td id="status-tot-bar">
+                                <div class="status-percent">
+                                    <div class="status-percent-value good" id="status-tot-value-bar" style="width: 53%"></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+                <section class="evo-content">
+                    <div class="evo-chain" id="evo-1">
+                        <div class="chain">
+                            <img src="https://img.icons8.com/ios-filled/50/null/long-arrow-down.png">
+                            <span class="chain-trigger">Start</span>
+                            <span class="chain-name">bulbasaur</span>
+                        </div>
+                    </div>
+                    <div class="evo-chain" id="evo-2">
+                        <div class="chain">
+                            <img src="https://img.icons8.com/ios-filled/50/null/long-arrow-down.png">
+                            <span class="chain-trigger">(level 16)</span>
+                            <span class="chain-name">ivysaur</span>
+                        </div>
+                        <div class="chain">
+                            <img src="https://img.icons8.com/ios-filled/50/null/long-arrow-down.png">
+                            <span class="chain-trigger">(level 16)</span>
+                            <span class="chain-name">chamasaur</span>
+                        </div>
+                    </div>
+                    <div class="evo-chain" id="evo-3">
+                        <div class="chain">
+                            <img src="https://img.icons8.com/ios-filled/50/null/long-arrow-down.png">
+                            <span class="chain-trigger">(level 32)</span>
+                            <span class="chain-name">venusaur</span>
+                        </div>
+                    </div>
+                </section>
+                <section class="moves-content">
+                    <div class="moves-table">
+                            <div class="moves-row op-5">
+                                <span>Name</span>
+                                <span>Level</span>
+                                <span>Method</span>
+                            </div>
+                            <div class="moves-row">
+                                <span>razor-wind</span>
+                                <span>0</span>
+                                <span>egg</span>
+                            </div>
+                            <div class="moves-row">
+                                <span>razor-wind</span>
+                                <span>0</span>
+                                <span>egg</span>
+                            </div>
+                    </div>
+                </section>
             </div>
         </div>
     </div>
     <!-- black background -->
     <div class="background-mask" id="background-mask"></div>
+    <!-- page start -->
     <section class="content">
         <h1>Pokédex</h1>
-
+        <h6>1st Generation</h6>
         <ol class="pokemons" id="pokemonList"></ol>
 
         <div class="pagination">
