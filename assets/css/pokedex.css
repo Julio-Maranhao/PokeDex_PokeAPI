@@ -128,6 +128,12 @@
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
+    filter: drop-shadow(1px 2px 3px black);
+}
+
+.pokemon:hover {
+    cursor: pointer;
+    -webkit-filter: brightness(80%);
 }
 
 .pokemon .name {
@@ -190,6 +196,22 @@
     border-radius: 1rem;
     color: #ffffff;
     font-size: .625rem;
+    -webkit-transition:all .2s linear;
+    -o-transition:all .2s linear;
+    transition:all .2s linear;
+}
+
+.pagination button:hover {
+    background-color: #6c79dbcc;
+    cursor: pointer;
+}
+
+.liked-li {
+    background-image: url(https://img.icons8.com/material-sharp/24/000000/hearts.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: invert(15%) sepia(99%) saturate(5521%) hue-rotate(1deg) brightness(108%) contrast(123%);
 }
 
 @media screen and (min-width: 380px) {

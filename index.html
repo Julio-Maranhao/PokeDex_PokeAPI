@@ -12,11 +12,103 @@
     <!-- Global CSS -->
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/pokedex.css">
+    <link rel="stylesheet" href="/assets/css/pokecard.css">
     <!-- icon shortcut error -->
     <link rel="shortcut icon" href="#">
 </head>
 
 <body>
+    <!-- Pokemon card -->
+    <div class="pokemon-card" id="pokemon-card">
+        <div class="card-nav">
+            <button class="return" id="return-button">
+                <img src="https://img.icons8.com/windows/32/null/long-arrow-left.png" class="return-icon">
+            </button>
+            <button class="like-button" id="like-button">
+                <img class="like-icon">
+            </button>
+        </div>
+        <span class="card-name">bulbasaur</span>
+        <br>
+        <span class="card-number">#1</span>
+        <div class="type-list">
+            <ol class="card-types">
+                <li class="card-type grass">grass</li>
+                <li class="card-type poison">poison</li>
+            </ol>
+        </div>
+        <div class="tabs">
+            <img class="card-image" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png">
+            <input type="radio" name="tabs" id="about" checked="checked">
+            <input type="radio" name="tabs" id="base">
+            <input type="radio" name="tabs" id="evo">
+            <input type="radio" name="tabs" id="moves">
+            <ul>
+                <li>
+                    <label class="about-tab" for="about" role="button"><Span>About</Span></label>
+                </li>
+                <li>
+                    <label class="base-tab" for="base" role="button"><Span>Base stats</Span></label>
+                </li>
+                <li>
+                    <label class="evo-tab" for="evo" role="button"><Span>Evolution</Span></label>
+                </li>
+                <li>
+                    <label class="moves-tab" for="moves" role="button"><Span>Moves</Span></label>
+                </li>
+            </ul>
+            <div class="slider">
+                <div class="indicator"></div>
+            </div>
+            <div class="card-content">
+                <section class="about-content">
+                    <table>
+                        <tr>
+                            <th id="about-species">Species</th>
+                            <th id="about-height">Height</th>
+                            <th id="about-weight">Weight</th>
+                            <th id="about-abilities">Abilities</th>
+                        </tr>
+                        <tr>
+                            <td id="about-species-value">valores</td>
+                            <td id="about-height-value">valores</td>
+                            <td id="about-weight-value">valores</td>
+                            <td id="about-abilities-value">valores</td>
+                        </tr>
+                    </table>
+                    <span class="content-header">Breeding</span>
+                    <table>
+                        <tr>
+                            <th id="about-gender">Gender</th>
+                            <th id="about-egg">Egg Groups</th>
+                            <th id="about-hatch">Hatch Steps</th>
+                        </tr>
+                        <tr>
+                            <td id="about-gender-value-male">
+                                <img src="/assets/images/male.png">
+                                <span id="about-gender-value-male-span">valores</span>
+                            </td>
+                            <td id="about-egg-value">valores</td>
+                            <td id="about-hatch-value">valores</td>
+                        </tr>
+                        <tr>
+                            <td id="about-gender-value-female">
+                                <img src="/assets/images/female.png">
+                                <span id="about-gender-value-female-span">valores</span>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </section>
+                <section class="base-content">Aqui ficarâo os status básicos</section>
+                <section class="evo-content">Aqui ficarâo as evoluções</section>
+                <section class="moves-content">Aqui ficarâo os ataques</section>
+            </div>
+        </div>
+    </div>
+    <!-- black background -->
+    <div class="background-mask" id="background-mask"></div>
     <section class="content">
         <h1>Pokédex</h1>
 
@@ -39,6 +131,7 @@
                 </p>
             </div>
             <div>
+                <p class="footerRef">Author</p>
                 <ul class="social-icons">
                     <li><a href="#" class="linkedin"></a></li>
                     <li><a href="#" class="github"></a></li>
@@ -49,6 +142,7 @@
     </footer>
 
     <script src="/assets/js/pokemon_model.js"></script>
+    <script src="/assets/js/pokemon_card.js"></script>
     <script src="/assets/js/pokeapi.js"></script>
     <script src="/assets/js/main.js"></script>
 </body>

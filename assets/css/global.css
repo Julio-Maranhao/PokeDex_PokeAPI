@@ -7,6 +7,7 @@
 
 body {
     background-color: #dbdbdb;
+    display: grid;
 }
 
 .content {
@@ -56,8 +57,12 @@ body {
     display: inline;
 }
 
+.social-icons li a img {
+    max-width: 70%;
+}
+
 .social-icons a{
-    background-color:#eceeef;
+    background-color: #F3F3F3;
     color:#818a91;
     font-size:16px;
     display:inline-block;
@@ -70,7 +75,29 @@ body {
     -webkit-transition:all .2s linear;
     -o-transition:all .2s linear;
     transition:all .2s linear
-  }
+    }
+
+.linkedin {
+    background-image: url("/assets/images/linkedin.png");
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+
+.linkedin:hover {
+    background-color: #0077b2c5;
+}
+
+.github {
+    background-image: url("/assets/images/github.png");
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+
+.github:hover {
+    background-color: #5300b2ad;
+}
 
 @media screen and (min-width: 992px) {
     .content {

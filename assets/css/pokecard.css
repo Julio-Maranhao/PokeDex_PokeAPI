@@ -1,0 +1,327 @@
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@-webkit-keyframes fadeOut {
+    from { opacity: 1; }
+      to { opacity: 0; }
+}
+@keyframes fadeOut {
+    from { opacity: 1; }
+      to { opacity: 0; }
+}
+
+:root {
+    --main-color: #18e697;
+}
+
+.background-mask {
+    display: none;
+    visibility: hidden;
+    position: fixed;
+    background-color: #000000ab;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.pokemon-card {
+    display: none;
+    visibility: hidden;
+    position: fixed;
+    top: 5%;
+    z-index: 2;
+    align-self: center;
+    justify-self: center;
+    width: 350px;
+    height: 600px;
+    background-color: var(--main-color);
+    border-radius: 1.5rem;
+}
+
+.show-card {
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+    -webkit-animation: fadeIn .5s;
+    animation: fadeIn .5s;
+}
+
+/* TABS SLIDER E CONTENTS */
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+}
+
+.tabs input[type="radio"] {
+    display: none;
+}
+
+/* ABOUT */
+.tabs input[id="about"]:checked ~ ul li .about-tab {
+    color: var(--main-color);
+    opacity: 1;
+}
+
+.tabs input[id="about"]:checked ~ .slider .indicator {
+    transform: translateX(-150%);
+}
+
+.tabs input[id="about"]:checked ~ .card-content .about-content {
+    display: block;
+}
+
+/* BASE STATS */
+.tabs input[id="base"]:checked ~ ul li .base-tab {
+    color: var(--main-color);
+    opacity: 1;
+}
+
+.tabs input[id="base"]:checked ~ .slider .indicator {
+    transform: translateX(-50%);
+}
+
+.tabs input[id="base"]:checked ~ .card-content .base-content {
+    display: block;
+}
+
+/* EVOLUTIONS */
+.tabs input[id="evo"]:checked ~ ul li .evo-tab {
+    color: var(--main-color);
+    opacity: 1;
+}
+
+.tabs input[id="evo"]:checked ~ .slider .indicator {
+    transform: translateX(50%);
+}
+
+.tabs input[id="evo"]:checked ~ .card-content .evo-content {
+    display: block;
+}
+
+/* MOVES */
+.tabs input[id="moves"]:checked ~ ul li .moves-tab {
+    color: var(--main-color);
+    opacity: 1;
+}
+
+.tabs input[id="moves"]:checked ~ .slider .indicator {
+    transform: translateX(150%);
+}
+
+.tabs input[id="moves"]:checked ~ .card-content .moves-content {
+    display: block;
+}
+
+.tabs ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    margin: 0;
+    padding: 1rem .5rem .25rem .5rem;
+    z-index: 2;
+}
+
+.tabs ul li label {
+    font-size: .625rem;
+    opacity: .5;
+}
+
+.slider {
+    position:relative;
+    width: 100%;
+    transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
+    padding: 0rem .5rem 1rem .5rem;
+    margin: 0;
+}
+
+.slider .indicator {
+    position: relative;
+    width: 25%;
+    margin: 0 auto;
+    height: .25rem;
+    border-radius: .25rem;
+    background-color: var(--main-color);
+    transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
+}
+
+.card-content{
+    height: fit-content;
+}
+
+.card-content section {
+    display: none;
+}
+
+.card-nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0.25rem 1rem 0rem 1rem;
+}
+
+.return {
+    background-color: transparent;
+    border-radius: 2rem;
+    border-color: transparent;
+    color: #ffffff;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: .5rem;
+}
+
+.return-icon {
+    height: fit-content;
+    width: 30px;
+    filter: invert(1);
+    -webkit-filter: invert(1);
+
+}
+
+.like-button {
+    background-color: transparent;
+    border-radius: 2rem;
+    border-color: transparent;
+    color: #ffffff;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: .5rem;
+    align-self: flex-end;
+}
+
+.like-icon {
+    content: url("/assets/images/like-none.png");
+    height: fit-content;
+    width: 30px;
+    filter: invert(1);
+    -webkit-filter: invert(1);
+}
+
+.like-icon:hover {
+    content: url("/assets/images/like-full.png");
+    filter: none;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.liked {
+    content: url("/assets/images/like-full.png");
+    filter: none;
+    transform: scale(1);
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.like-icon:active {
+    transform: scale(1.5);
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.card-image {
+    border-style: none;
+    display: block;
+    position: absolute;
+    height: 150px;
+    align-self: center;
+    transform: translateY(-120px);
+}
+
+.card-name {
+    padding: 0rem 1rem;
+    text-transform: capitalize;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.card-number {
+    padding: 0rem 1rem 0rem 1rem;
+    font-size: .625rem;
+    color: #ffffff;
+    text-align: end;
+}
+
+.pokemon-card br {
+    display: none;
+}
+
+.type-list {
+    margin-bottom: 120px;
+}
+
+.type-list ol {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: end;
+    padding: 0rem 1rem;
+    margin: 0 auto;
+}
+
+.type-list ol li {
+    padding: 0.25rem 1rem 0.25rem 1rem;
+    border-radius: 1rem;
+    font-size: .625rem;
+    margin-right: 0.25rem;
+}
+
+.card-content {
+    padding: 0rem 1rem 0rem 1rem;
+    overflow: auto;
+}
+
+.card-content table {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.card-content table tbody {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.card-content table tr {
+    display: block;
+    float: left;
+    font-size: .625rem;
+    text-align: left;
+}
+
+.card-content table tr th {
+    display: flex;
+    margin-bottom: 0.75rem;
+    opacity: .5;
+}
+
+.card-content table tr td {
+    display: flex;
+    margin-bottom: 0.75rem;
+    align-items: center;
+    text-transform: capitalize;
+    
+}
+
+.card-content table tr td img {
+    height: 15px;
+    margin-right: 0.25rem;
+}
+
+.content-header {
+    display: block;
+    margin: 1rem 0rem 1rem;
+}
