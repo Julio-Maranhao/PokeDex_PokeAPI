@@ -3,7 +3,7 @@ const loadMoreButton = document.getElementById('loadMoreButton');
 const pokemonCard = document.getElementById('pokemon-card');
 const backgroundMask = document.getElementById('background-mask');
 const returnButton = document.getElementById('return-button');
-const likeButton = document.getElementById('like-button')
+const likeButton = document.getElementById('like-button');
 
 
 // add lista de likes
@@ -83,11 +83,7 @@ pokemonList.addEventListener('DOMSubtreeModified', () => {
         li.addEventListener('click', () => {
             let pokemon_name = li.querySelector('.name').innerHTML;
             backgroundMask.classList.add('show-card');
-            // Inserir O elemento Loading
-            // INSERIR A FUNÇÃO SHOW  POKEMON CARD
-            pokemonCard.classList.add('show-card');
-
-            console.log(pokemon_name);
+            BuildPokemonCard(pokemon_name);
         })
     })
 })

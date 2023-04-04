@@ -315,6 +315,8 @@
     margin-bottom: 0.75rem;
     align-items: center;
     text-transform: capitalize;
+    white-space: nowrap;
+    height: fit-content;
     
 }
 
@@ -333,7 +335,7 @@
     height: 3px;
     width: 160px;
     position: absolute;
-    transform: translateX(-25px) translateY(-1px);
+    transform: translateX(-25px) translateY(5px);
     border-radius: 1rem;
 }
 
@@ -388,6 +390,9 @@
 .evo-chain {
     display: flex;
     justify-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .evo-chain img {
@@ -402,11 +407,12 @@
     margin: 0.25rem 0.5rem 0.25rem 0.5rem;
 }
 
-.chain .chain-name {
+.chain-name {
     text-transform: capitalize;
     padding: 0.5rem;
 }
 
-.chain .chain-trigger {
+.chain-trigger {
     font-size: .625rem;
+    text-transform: capitalize;
 }
